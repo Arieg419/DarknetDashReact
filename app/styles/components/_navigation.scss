@@ -1,0 +1,38 @@
+.settings-bar {
+	overflow: hidden; 
+	outline: none;
+}
+
+.navigation > ul > li.active {
+	color: #2F353F;
+	background: #E6EBEC;
+}
+
+.navigation > ul > a {
+    display: block;
+    padding: 12px 25px;
+    color: #838F9A;
+    font-size: 15px;
+    text-decoration: none;
+    transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    font-weight: 400;
+    outline: none !important;
+}
+
+.navigation ul li ul li {
+    padding: 8px 25px 8px 55px;
+    color: #838F9A;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    font-size: 14px;
+    text-align: left;
+    display: block;
+    outline: none !important;
+}
