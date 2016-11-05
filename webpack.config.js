@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var path = require('path'); // core module
 
+
 module.exports = {
   entry: [
     'script!jquery/dist/jquery.min.js',
@@ -13,6 +14,8 @@ module.exports = {
     './app/app.jsx',
     'script!omeradded/jquery.app.js',
     'script!./app/styles/assets/morris/morris.min.js',
+    'script!./app/styles/assets/sparkline-chart/jquery.sparkline.min.js',
+    'script!./app/styles/assets/sparkline-chart/chart-sparkline.js'
   ],
   externals: {
     jquery: 'jQuery'
