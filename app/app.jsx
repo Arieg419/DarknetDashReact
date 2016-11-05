@@ -8,6 +8,7 @@ import Main from 'Main';
 import Navigation from 'Navigation';
 import Dashboard from 'Dashboard';
 import CategoryList from 'CategoryList';
+import DataVisualization from 'DataVisualization';
 
 
 // App css
@@ -28,6 +29,7 @@ ReactDOM.render(
     <Route path="/" component={Main}>
       <IndexRoute component={Dashboard}/>
       <Route path="categorylist" component={CategoryList}/>
+      <Route path="datavisualization" component={DataVisualization}/>
     </Route>
   </Router>,
   document.getElementById('app')

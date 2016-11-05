@@ -14,7 +14,11 @@ var Aside = () => {
         
             <nav className="navigation">
                 <ul className="list-unstyled">
-                    <Link to="/"><li className="active"><i className="zmdi zmdi-view-dashboard"></i> <span className="nav-label">Dashboard</span></li></Link>
+                    <li className="has-submenu"><a href="#"><i className="zmdi zmdi-view-dashboard"></i> <span className="nav-label">Dashboard</span><span className="menu-arrow"></span></a>
+                        <ul className="list-unstyled">
+                            <Link to="/"><li><i></i> <span>Home</span></li></Link>
+                        </ul>
+                    </li>
                     <li className="has-submenu"><a href="#"><i className="zmdi zmdi-format-list-bulleted"></i> <span className="nav-label">Data Tables</span><span className="menu-arrow"></span></a>
                         <ul className="list-unstyled">
                             <Link to="/categorylist"><li><i></i> <span>Terrorism</span></li></Link>
@@ -23,15 +27,12 @@ var Aside = () => {
                             <Link to="/categorylist"><li><i></i> <span>Narcotics</span></li></Link>
                         </ul>
                     </li>
-                    <li className="has-submenu"><a href="#"><i className="zmdi zmdi-chart"></i> <span className="nav-label">Charts</span><span className="menu-arrow"></span></a>
+                    <li className="has-submenu"><a href="#"><i className="zmdi zmdi-chart"></i> <span className="nav-label">Data Visualization</span><span className="menu-arrow"></span></a>
                         <ul className="list-unstyled">
-                            <li><a href="charts-morris.html">Morris Chart</a></li>
-                            <li><a href="charts-chartjs.html">Chartjs</a></li>
-                            <li><a href="charts-flot.html">Flot Chart</a></li>
-                            <li><a href="charts-rickshaw.html">Rickshaw Chart</a></li>
-                            <li><a href="charts-peity.html">Peity Chart</a></li>
-                            <li><a href="charts-c3.html">C3 Chart</a></li>
-                            <li><a href="charts-other.html">Other Chart</a></li>
+                            <Link to="/datavisualization"><li><i></i> <span>Terrorism</span></li></Link>
+                            <Link to="/datavisualization"><li><i></i> <span>Paedophilia</span></li></Link>
+                            <Link to="/datavisualization"><li><i></i> <span>Weapons</span></li></Link>
+                            <Link to="/datavisualization"><li><i></i> <span>Narcotics</span></li></Link>
                         </ul>
                     </li>
 

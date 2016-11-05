@@ -12,7 +12,7 @@
 
     ChartJs.prototype.respChart = function respChart(selector,type,data, options) {
         // get selector by context
-        var ctx = selector.get(0).getContext("2d");
+        // var ctx = selector.get(0).getContext("2d");
         // pointing parent container to make chart js inherit its width
         var container = $(selector).parent();
 
@@ -23,6 +23,7 @@
         function generateChart(){
             // make chart width fit with its container
             var ww = selector.attr('width', $(container).width() );
+            /*
             switch(type){
                 case 'Line':
                     new Chart(ctx).Line(data, options);
@@ -43,6 +44,7 @@
                     new Chart(ctx).PolarArea(data, options);
                     break;
             }
+            */
             // Initiate new chart or Redraw
 
         };

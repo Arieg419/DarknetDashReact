@@ -10,15 +10,9 @@ module.exports = {
     'script!omeradded/pace.min.js',
     'script!omeradded/jquery.scrollTo.min.js',
     'script!omeradded/jquery.nicescroll.js',
-    // 'script!omeradded/waypoints.min.js',
-    // 'script!omeradded/jquery.counterup.min.js',
-    // 'script!omeradded/skycons.min.js',
-    // 'script!omeradded/inline.js',
-    // 'script!./app/styles/assets/sparkline-chart/jquery.sparkline.min.js',
-    // 'script!./app/styles/assets/sparkline-chart/chart-sparkline.js',
     './app/app.jsx',
     'script!omeradded/jquery.app.js',
-    'script!./app/styles/assets/morris/morris.min.js'
+    'script!./app/styles/assets/morris/morris.min.js',
   ],
   externals: {
     jquery: 'jQuery'
@@ -46,7 +40,8 @@ module.exports = {
       Navigation: 'app/components/Navigation.jsx',
       Dashboard: 'app/components/Dashboard.jsx',
       Aside: 'app/components/Aside.jsx',
-      CategoryList: 'app/components/CategoryList.jsx'
+      CategoryList: 'app/components/CategoryList.jsx',
+      DataVisualization: 'app/components/DataVisualization.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },

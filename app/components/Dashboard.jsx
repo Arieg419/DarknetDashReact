@@ -24,7 +24,7 @@ var Dashboard = React.createClass({
                                     <div className="portlet">
                                         <div className="portlet-heading">
                                             <h3 className="portlet-title text-dark text-uppercase">
-                                                Weekly Crimes Report
+                                                Weekly Threat Report
                                             </h3>
                                             <div className="portlet-widgets">
                                                 <a href="javascript:;" data-toggle="reload"><i className="ion-refresh"></i></a>
@@ -42,19 +42,19 @@ var Dashboard = React.createClass({
                                                 <div className="row text-center m-t-30 m-b-30">
                                                     <div className="col-sm-3 col-xs-6">
                                                         <h4>$ 126</h4>
-                                                        <small className="text-muted"> Today's Crimes</small>
+                                                        <small className="text-muted"> Today's Threat</small>
                                                     </div>
                                                     <div className="col-sm-3 col-xs-6">
                                                         <h4>$ 967</h4>
-                                                        <small className="text-muted">This Week's Crimes</small>
+                                                        <small className="text-muted">This Week's Threat</small>
                                                     </div>
                                                     <div className="col-sm-3 col-xs-6">
                                                         <h4>$ 4500</h4>
-                                                        <small className="text-muted">This Month's Crimes</small>
+                                                        <small className="text-muted">This Month's Threat</small>
                                                     </div>
                                                     <div className="col-sm-3 col-xs-6">
                                                         <h4>$ 87,000</h4>
-                                                        <small className="text-muted">This Year's Crimes</small>
+                                                        <small className="text-muted">This Year's Threat</small>
                                                     </div>
                                                 </div>
                                             </div>
