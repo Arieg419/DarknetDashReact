@@ -11,9 +11,6 @@ module.exports = {
     'script!omeradded/jquery.scrollTo.min.js',
     'script!omeradded/jquery.nicescroll.js',
     './app/app.jsx',
-    'script!./app/styles/assets/morris/morris.min.js',
-    'script!./app/styles/assets/sparkline-chart/jquery.sparkline.min.js',
-    'script!./app/styles/assets/sparkline-chart/chart-sparkline.js',
     'script!omeradded/jquery.app.js'
   ],
   externals: {

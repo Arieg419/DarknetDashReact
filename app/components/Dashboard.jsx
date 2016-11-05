@@ -1,14 +1,11 @@
 import React from 'react';
 import {Link, IndexLink} from 'react-router';
-import Raphael from 'webpack-raphael';
+import { Sparklines, SparklinesLine, SparklinesReferenceLine, SparklinesBars } from 'react-sparklines';
 
 import 'script!omeradded/waypoints.min.js';
 import 'script!omeradded/jquery.counterup.min.js';
 import 'script!omeradded/skycons.min.js';
 import 'script!omeradded/inline.js';
-import 'script!../styles/assets/sparkline-chart/jquery.sparkline.min.js';
-import 'script!../styles/assets/sparkline-chart/chart-sparkline.js';
-// import 'script!../../public/js/jquery.dashboard.js';
 
 
 
@@ -19,6 +16,8 @@ var Dashboard = React.createClass({
         <div>
             <section className="content">
                 <div className="wraper container-fluid">
+
+
 
                             <div className="row">
 
@@ -39,7 +38,10 @@ var Dashboard = React.createClass({
                                         </div>
                                         <div id="portlet1" className="panel-collapse collapse in">
                                             <div className="portlet-body">
-                                                <div id="morris-bar-example"></div>
+                                                <Sparklines  data={[11,22,2,45,32,65]}>
+                                                    <SparklinesLine />
+                                                    <SparklinesReferenceLine type="avg" />
+                                                </Sparklines>
 
                                                 <div className="row text-center m-t-30 m-b-30">
                                                     <div className="col-sm-3 col-xs-6">
@@ -83,7 +85,9 @@ var Dashboard = React.createClass({
                                         </div>
                                         <div id="portlet2" className="panel-collapse collapse in">
                                             <div className="portlet-body">
-                                                <div id="morris-area-example"></div>
+                                                <Sparklines data={[59, 12, 2, 70,24,32,63]}>
+                                                  <SparklinesBars />
+                                                </Sparklines>
                                                 
                                                 <div className="row text-center m-t-30 m-b-30">
                                                     <div className="col-sm-3 col-xs-6">
