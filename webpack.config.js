@@ -40,7 +40,8 @@ module.exports = {
       Dashboard: 'app/components/Dashboard.jsx',
       Aside: 'app/components/Aside.jsx',
       CategoryList: 'app/components/CategoryList.jsx',
-      DataVisualization: 'app/components/DataVisualization.jsx'
+      DataVisualization: 'app/components/DataVisualization.jsx',
+      GoogleMap: 'app/components/GoogleMap.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },

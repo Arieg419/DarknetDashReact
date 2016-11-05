@@ -2,6 +2,7 @@ import React from 'react';
 import {Link, IndexLink} from 'react-router';
 import { Sparklines, SparklinesLine, SparklinesReferenceLine, SparklinesBars } from 'react-sparklines';
 import Chart from 'chart.js';
+import Map from 'GoogleMap';
 var PieChart = require("react-chartjs").Pie;
 
 var randomScalingFactor = function() {
@@ -58,7 +59,7 @@ var DataVisualization = React.createClass({
                 <div className="wraper container-fluid">
                     <div className="page-title"> 
                         <h3 className="title">Chartjs</h3> 
-                </div>
+                    </div>
 
 
                  <div className="row">
@@ -130,18 +131,21 @@ var DataVisualization = React.createClass({
                                 </div>
                                 <div className="clearfix"></div>
                             </div>
-                            <div id="portlet4" className="panel-collapse collapse in">
+                            <div  className="panel-collapse collapse in">
                                 <div className="portlet-body">
                                 <PieChart data={pieData} options={pieOptions} />
                                 </div>
                             </div>
                         </div> 
                     </div>
+
+                  </div>
+
+                  <h1>MAP</h1>
+
                 
                 </div> 
 
-                      
-                </div>
             </section>
         </div>
     );

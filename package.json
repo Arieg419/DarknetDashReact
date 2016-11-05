@@ -1,13 +1,12 @@
 {
-  "name": "boilerplate",
+  "name": "darknet-dash",
   "version": "1.0.0",
-  "description": "Simple react app",
+  "description": "Threat analysis application",
   "main": "index.js",
   "scripts": {
-    "test": "karma start",
     "start": "node server.js"
   },
-  "author": "Andrew Mead",
+  "author": "Omer Goldberg",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.9.1",
@@ -19,6 +18,7 @@
     "react-bootstrap": "^0.30.6",
     "react-chartjs": "^0.8.0",
     "react-dom": "^0.14.8",
+    "react-google-maps": "^6.0.1",
     "react-router": "^2.0.0",
     "react-sparklines": "^1.6.0"
   },
@@ -33,13 +33,6 @@
     "file-loader": "^0.9.0",
     "foundation-sites": "^6.2.0",
     "jquery": "^2.2.1",
-    "karma": "^0.13.22",
-    "karma-chrome-launcher": "^0.2.2",
-    "karma-mocha": "^0.2.2",
-    "karma-mocha-reporter": "^2.0.0",
-    "karma-sourcemap-loader": "^0.3.7",
-    "karma-webpack": "^1.7.0",
-    "mocha": "^2.4.5",
     "node-sass": "^3.4.2",
     "react-addons-test-utils": "^15.3.2",
     "sass-loader": "^3.1.2",
