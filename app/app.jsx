@@ -12,13 +12,14 @@ import DataVisualization from 'DataVisualization';
 
 
 // App css
-import './styles/css/animate.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import './styles/css/bootstrap-reset.css';
-import './styles/css/helper.css';
-import './styles/css/style.css';
+import './styles/css/animate.css';
 import './styles/assets/morris/morris.css';
 import './styles/assets/sweet-alert/sweet-alert.min.css';
+import './styles/assets/c3-chart/c3.css';
+import './styles/css/style.css';
+import './styles/css/helper.css';
 import 'style!css!sass!applicationStyles';
 
 

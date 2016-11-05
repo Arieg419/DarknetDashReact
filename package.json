@@ -16,6 +16,7 @@
     "express": "^4.13.4",
     "react": "^0.14.8",
     "react-bootstrap": "^0.30.6",
+    "react-chartjs": "^0.8.0",
     "react-dom": "^0.14.8",
     "react-router": "^2.0.0"
   },

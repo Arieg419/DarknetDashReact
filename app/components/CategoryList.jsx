@@ -7,6 +7,7 @@ import "../styles/assets/magnific-popup/magnific-popup.css";
 import "../styles/assets/jquery-datatables-editable/datatables.css";
 
 // JS imports
+import "../styles/assets/jquery-datatables-editable/jquery.dataTables.js";
 import "../styles/assets/magnific-popup/magnific-popup.js";
 import "../styles/assets/jquery-datatables-editable/datatables.editable.init.js";
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link, IndexLink} from 'react-router';
-
+import Raphael from 'webpack-raphael';
 
 import 'script!omeradded/waypoints.min.js';
 import 'script!omeradded/jquery.counterup.min.js';
@@ -8,6 +8,8 @@ import 'script!omeradded/skycons.min.js';
 import 'script!omeradded/inline.js';
 import 'script!../styles/assets/sparkline-chart/jquery.sparkline.min.js';
 import 'script!../styles/assets/sparkline-chart/chart-sparkline.js';
+// import 'script!../../public/js/jquery.dashboard.js';
+
 
 
 var Dashboard = React.createClass({
