@@ -40,6 +40,8 @@ module.exports = {
       Dashboard: 'app/components/Dashboard/Dashboard.jsx',
       TopThreatList: 'app/components/Dashboard/TopThreatsList/TopThreatsList.jsx',
       TopThreatsListItem: 'app/components/Dashboard/TopThreatsList/TopThreatsListItem.jsx',
+      CategoryDisplayList: 'app/components/Dashboard/CategoryDisplay/CategoryDisplayList.jsx',
+      CategoryDisplayItem: 'app/components/Dashboard/CategoryDisplay/CategoryDisplayItem.jsx',
       Aside: 'app/components/Aside/Aside.jsx',
       CategoryList: 'app/components/CategoryList/CategoryList.jsx',
       DataVisualization: 'app/components/DataVisualization/DataVisualization.jsx',

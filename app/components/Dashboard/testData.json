@@ -63,5 +63,27 @@ module.exports = {
       "URL": "http://cnn.com",
       "classification": "label label-purple"
     }
+  ],
+  "Categories": [
+    {
+      "key": 1,
+      "name": "Paedophilia",
+      "traction": 32.4
+    },
+    {
+      "key": 2,
+      "name": "Weapon Trafficking",
+      "traction": 47.1
+    },
+    {
+      "key": 3,
+      "name": "Terrorism",
+      "traction": 29.6
+    },
+    {
+      "key": 4,
+      "name": "Narcotics",
+      "traction": 73.2
+    }
   ]
 };

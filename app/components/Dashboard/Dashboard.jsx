@@ -12,6 +12,7 @@ import Data from './testData.json';
 
 // Import Page Specific Components
 import TopThreatList from 'TopThreatList';
+import CategoryDisplayList from 'CategoryDisplayList';
 
 var Dashboard = React.createClass({
 
@@ -121,53 +122,7 @@ var Dashboard = React.createClass({
                             </div> 
 
 
-                            <div className="row">
-                                <div className="col-lg-3 col-sm-6">
-                                    <div className="tile-stats white-bg"> 
-                                        <div className="status">
-                                            <h3 className="m-t-0"><span className="counter">25</span>% more</h3> 
-                                            <p>Monthly visitor statistics</p>
-                                        </div> 
-                                        <div className="chart-inline">
-                                            <span className="inlinesparkline"></span> 
-                                        </div>
-                                    </div> 
-                                </div>
-
-                                <div className="col-lg-3 col-sm-6">
-                                    <div className="tile-stats white-bg"> 
-                                        <div className="status">
-                                            <h3 className="m-t-0 counter">49</h3> 
-                                            <p>Avg. Crime per day</p>
-                                        </div> 
-                                        <span className="dynamicbar-big"></span> 
-                                    </div> 
-                                </div>
-
-                                <div className="col-lg-3 col-sm-6">
-                                    <div className="tile-stats white-bg"> 
-                                        <div className="status">
-                                            <h3 className="m-t-0 counter">0.9</h3> 
-                                            <p>Stock Market</p>
-                                        </div> 
-                                        <span id="compositeline"></span> 
-                                    </div>
-                                </div>
-
-                                <div className="col-lg-3 col-sm-6">
-                                    <div className="tile-stats white-bg"> 
-                                        <div className="col-sm-8">
-                                            <div className="status">
-                                            <h3 className="m-t-15"><span className="counter">91.5</span>%</h3> 
-                                            <p>US Dollar Share</p>
-                                        </div> 
-                                        </div>
-                                        <div className="col-sm-4 m-t-20">
-                                            <span className="sparkpie-big"></span> 
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div>
+                            <CategoryDisplayList categories={Data.Categories} />
 
                             <TopThreatList data={Data.Documents} />
 
