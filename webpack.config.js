@@ -36,13 +36,15 @@ module.exports = {
       applicationStyles: 'app/styles/app.scss',
       animate: 'public/css/animate.css',
       Main: 'app/components/Main.jsx',
-      Navigation: 'app/components/Navigation.jsx',
-      Dashboard: 'app/components/Dashboard.jsx',
-      Aside: 'app/components/Aside.jsx',
-      CategoryList: 'app/components/CategoryList.jsx',
-      DataVisualization: 'app/components/DataVisualization.jsx',
-      GoogleMap: 'app/components/GoogleMap.jsx',
-      DocumentProfile: 'app/components/DocumentProfile.jsx'
+      Navigation: 'app/components/Navigation/Navigation.jsx',
+      Dashboard: 'app/components/Dashboard/Dashboard.jsx',
+      TopThreatList: 'app/components/Dashboard/TopThreatsList/TopThreatsList.jsx',
+      TopThreatsListItem: 'app/components/Dashboard/TopThreatsList/TopThreatsListItem.jsx',
+      Aside: 'app/components/Aside/Aside.jsx',
+      CategoryList: 'app/components/CategoryList/CategoryList.jsx',
+      DataVisualization: 'app/components/DataVisualization/DataVisualization.jsx',
+      GoogleMap: 'app/components/DocumentProfile/GoogleMap.jsx',
+      DocumentProfile: 'app/components/DocumentProfile/DocumentProfile.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },

@@ -1,0 +1,67 @@
+module.exports = {
+  "Documents": [
+    {
+      "key": 1,
+      "documentName": "Darknet 1",
+      "discoveryData": "01/01/2016",
+      "darkClear": "Dark",
+      "overallScore": 7.2,
+      "URL": "http://cnn.com",
+      "classification": "label label-success"
+    },
+    {
+      "key": 2,
+      "documentName": "Darknet 2",
+      "discoveryData": "01/01/2016",
+      "darkClear": "Dark",
+      "overallScore": 7.2,
+      "URL": "http://cnn.com",
+      "classification": "label label-info"
+    },
+    {
+      "key": 3,
+      "documentName": "Darknet 3",
+      "discoveryData": "01/01/2016",
+      "darkClear": "Dark",
+      "overallScore": 7.2,
+      "URL": "http://cnn.com",
+      "classification": "label label-pink"
+    },
+    {
+      "key": 4,
+      "documentName": "Darknet 4",
+      "discoveryData": "01/01/2016",
+      "darkClear": "Dark",
+      "overallScore": 7.2,
+      "URL": "http://cnn.com",
+      "classification": "label label-purple"
+    },
+    {
+      "key": 5,
+      "documentName": "Darknet 4",
+      "discoveryData": "01/01/2016",
+      "darkClear": "Dark",
+      "overallScore": 7.2,
+      "URL": "http://cnn.com",
+      "classification": "label label-primary"
+    },
+    {
+      "key": 6,
+      "documentName": "Darknet 4",
+      "discoveryData": "01/01/2016",
+      "darkClear": "Dark",
+      "overallScore": 7.2,
+      "URL": "http://cnn.com",
+      "classification": "label label-warning"
+    },
+    {
+      "key": 7,
+      "documentName": "Darknet 4",
+      "discoveryData": "01/01/2016",
+      "darkClear": "Dark",
+      "overallScore": 7.2,
+      "URL": "http://cnn.com",
+      "classification": "label label-purple"
+    }
+  ]
+};
