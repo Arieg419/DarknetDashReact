@@ -46,6 +46,10 @@ module.exports = {
       CategoryTableList: 'app/components/CategoryTableList/CategoryTableList.jsx',
       CategoryTableItem: 'app/components/CategoryTableList/CategoryTableItem.jsx',
       DataVisualization: 'app/components/DataVisualization/DataVisualization.jsx',
+      CategoricalDevelopment: 'app/components/DataVisualization/CategoricalDevelopment/CategoricalDevelopmentChart.jsx',
+      CategoricalEntityChart: 'app/components/DataVisualization/CategoricalEntityAnalysis/CategoricalEntityChart.jsx',
+      CategoricalSentimentChart: 'app/components/DataVisualization/CategoricalSentimentAnalysis/CategoricalSentimentChart.jsx',
+      CategoricalRegions: 'app/components/DataVisualization/CategoricalRegions/CategoricalMap.jsx',
       GoogleMap: 'app/components/DocumentProfile/GoogleMap.jsx',
       DocumentProfile: 'app/components/DocumentProfile/DocumentProfile.jsx'
     },
