@@ -8,7 +8,7 @@ import 'script!omeradded/skycons.min.js';
 import 'script!omeradded/inline.js';
 
 // Import Statid Data for Dynamic Render Testing
-import Data from './testData.json';
+import Data from '../testData.json';
 
 // Import Page Specific Components
 import TopThreatList from 'TopThreatList';

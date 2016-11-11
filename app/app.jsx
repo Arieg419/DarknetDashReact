@@ -7,7 +7,7 @@ import { Route, Router, IndexRoute, hashHistory } from 'react-router';
 import Main from 'Main';
 import Navigation from 'Navigation';
 import Dashboard from 'Dashboard';
-import CategoryList from 'CategoryList';
+import CategoryTableList from 'CategoryTableList';
 import DataVisualization from 'DataVisualization';
 import DocumentProfile from 'DocumentProfile';
 
@@ -28,7 +28,7 @@ ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
       <IndexRoute component={Dashboard}/>
-      <Route path="categorylist" component={CategoryList}/>
+      <Route path="categorylist" component={CategoryTableList}/>
       <Route path="datavisualization" component={DataVisualization}/>
       <Route path="documentprofile" component={DocumentProfile}/>
     </Route>

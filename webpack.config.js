@@ -43,7 +43,8 @@ module.exports = {
       CategoryDisplayList: 'app/components/Dashboard/CategoryDisplay/CategoryDisplayList.jsx',
       CategoryDisplayItem: 'app/components/Dashboard/CategoryDisplay/CategoryDisplayItem.jsx',
       Aside: 'app/components/Aside/Aside.jsx',
-      CategoryList: 'app/components/CategoryList/CategoryList.jsx',
+      CategoryTableList: 'app/components/CategoryTableList/CategoryTableList.jsx',
+      CategoryTableItem: 'app/components/CategoryTableList/CategoryTableItem.jsx',
       DataVisualization: 'app/components/DataVisualization/DataVisualization.jsx',
       GoogleMap: 'app/components/DocumentProfile/GoogleMap.jsx',
       DocumentProfile: 'app/components/DocumentProfile/DocumentProfile.jsx'
