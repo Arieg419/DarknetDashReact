@@ -1,9 +1,25 @@
-var React = require('react');
-var {Link, IndexLink} = require('react-router');
+import React from 'react';
+import {Link, IndexLink} from 'react-router';
+var PieChart = require("react-chartjs").Pie;
+
+// Utils
+import data from 'json-loader!NarcoticsData/cocaine';
+import allDates from 'FormatDate';
+
+// My Components
+import CategoricalEntityChart from 'CategoricalEntityChart';
+import CategoricalSentimentChart from 'CategoricalSentimentChart';
+import DocumentProfileProgressBar from  'DocumentProfileProgressBar';
+import DocumentProfileSentimentBreakdown from  'DocumentProfileSentimentBreakdown';
+
 var imgUrl = 'img/terrorism-2.jpg';
 var divStyle = {
   backgroundImage: 'url(' + imgUrl + ')'
 };
+
+console.log("Verifying run...hello");
+console.log(data.entities);
+
 
 var DocumentProfile = () => {
   return (
@@ -18,7 +34,7 @@ var DocumentProfile = () => {
                             <div className="col-sm-6 clearfix">
                               <span className="img-wrapper pull-left m-r-15"><img src="img/terrorist.jpg" alt="" styles={{width:"64px"}} className="br-radius"/></span>
                               <div className="media-body">
-                                <h3 className="text-white mb-2 m-t-10 ellipsis">Rebellion in Yemen</h3>
+                                <h3 className="text-white mb-2 m-t-10 ellipsis">{data.title}</h3>
                                 <h5 className="text-white"> 7.3</h5>
                               </div>
                             </div>
@@ -47,7 +63,6 @@ var DocumentProfile = () => {
                             <div className="panel-body p-0"> 
                                 <ul className="nav nav-tabs profile-tabs">
                                     <li className="active"><a data-toggle="tab" href="#aboutme">Meta Data</a></li>
-                                    <li className=""><a data-toggle="tab" href="#user-activities">Entity Analytics</a></li>
                                     <li className=""><a data-toggle="tab" href="#edit-profile">Sentiment Analytics</a></li>
                                     <li className=""><a data-toggle="tab" href="#projects">Links found</a></li>
                                 </ul>
@@ -59,9 +74,9 @@ var DocumentProfile = () => {
                                         <h1>Rebellion in Yemen</h1>
                                         <span className="designation">Dark Net, Rebellion, Yemen</span>
                                         <p>
-                                            This document was found on the dark net. Etc. This document was found on the dark net. Etc. This document was found on the dark net. Etc.
+                                            { data.fromDark ? 'This article was found on the dark net' : 'This article was found on the clearnet'}
                                         </p>
-                                        <a className="btn btn-primary m-t-20" href="#"> <i className="fa fa-check"></i> Following</a>
+                                        <a className="btn btn-primary m-t-20" href="#"> <i className="fa fa-check"></i> Analyzed</a>
 
                                         <table className="table table-condensed">
                                             <thead>
@@ -74,14 +89,14 @@ var DocumentProfile = () => {
                                                     <td><b>Url</b></td>
                                                     <td>
                                                     <a href="#" className="ng-binding">
-                                                        www.example.com
+                                                        {data.url}
                                                     </a></td>
                                                 </tr>
                                                 <tr>
                                                     <td><b>Date Found</b></td>
                                                     <td>
                                                     <a href="" className="ng-binding">
-                                                        01/01/2017
+                                                        {data.dateFound}
                                                     </a></td>
                                                 </tr>
                                                 <tr>
@@ -93,61 +108,13 @@ var DocumentProfile = () => {
                                     </div> 
                                 </div> 
 
-
-                                <div id="user-activities" className="tab-pane">
-                                    <div className="timeline-2">
-                                        <div className="time-item">
-                                            <div className="item-info">
-                                                <div className="text-muted">5 minutes ago</div>
-                                                <p><strong><a href="#" className="text-info">John Doe</a></strong> Uploaded a photo <strong>"DSC000586.jpg"</strong></p>
-                                            </div>
-                                        </div>
-
-                                        <div className="time-item">
-                                            <div className="item-info">
-                                                <div className="text-muted">30 minutes ago</div>
-                                                <p><a href="" className="text-info">Lorem</a> commented your post.</p>
-                                                <p><em>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod. "</em></p>
-                                            </div>
-                                        </div>
-
-                                        <div className="time-item">
-                                            <div className="item-info">
-                                                <div className="text-muted">59 minutes ago</div>
-                                                <p><a href="" className="text-info">Jessi</a> attended a meeting with<a href="#" className="text-success">John Doe</a>.</p>
-                                                <p><em>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod. "</em></p>
-                                            </div>
-                                        </div>
-
-                                        <div className="time-item">
-                                            <div className="item-info">
-                                                <div className="text-muted">5 minutes ago</div>
-                                                <p><strong><a href="#" className="text-info">John Doe</a></strong>Uploaded 2 new photos</p>
-                                            </div>
-                                        </div>
-
-                                        <div className="time-item">
-                                            <div className="item-info">
-                                                <div className="text-muted">30 minutes ago</div>
-                                                <p><a href="" className="text-info">Lorem</a> commented your post.</p>
-                                                <p><em>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod. "</em></p>
-                                            </div>
-                                        </div>
-
-                                        <div className="time-item">
-                                            <div className="item-info">
-                                                <div className="text-muted">59 minutes ago</div>
-                                                <p><a href="" className="text-info">Jessi</a> attended a meeting with<a href="#" className="text-success">John Doe</a>.</p>
-                                                <p><em>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod. "</em></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
                                 
                                 <div id="edit-profile" className="tab-pane">
                                     <div className="user-profile-content">
-                                        
+                                        <div className="row">
+                                            <DocumentProfileProgressBar entities={data.entities} />
+                                            <DocumentProfileSentimentBreakdown entities={data.entities} />
+                                        </div>
                                     </div>
                                 </div>
 
