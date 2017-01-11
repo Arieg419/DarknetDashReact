@@ -17,10 +17,9 @@ var DocumentProfileProgressBar = (props) => {
 
     var terms = props.entities.map((entity, idx) => {
       var checker = `${Math.floor(entity.relevance*100)}`;
-      console.log("checkre is ", checker, checker.toString());  
       return (
         <div key={idx}>
-          <p className="small">{entity.type} - <span className={textColors[createIdx(idx, textColorsLen)]}>{entity.relevance*100}</span></p>
+          <p className="small">{entity.text} - {entity.type} - <span className={textColors[createIdx(idx, textColorsLen)]}>{entity.relevance*100}</span></p>
           <div className="progress">
             <div className={`progress-bar progress-animated animated ${barColors[createIdx(idx, barColorsLen)]}`} role="progressbar" aria-valuemin="0" aria-valuemax="100" style={{width: `${Math.floor(entity.relevance*100)}%`}}>
             </div>
@@ -30,7 +29,7 @@ var DocumentProfileProgressBar = (props) => {
     });
 
     return (
-           <div className="col-md-4">
+           <div className="col-md-3">
               <h4 className="m-b-15 text-uppercase">Term Relevance</h4>
 
              {terms}

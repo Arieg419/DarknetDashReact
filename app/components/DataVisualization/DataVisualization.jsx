@@ -9,15 +9,18 @@ import CategoricalEntityChart from 'CategoricalEntityChart';
 import CategoricalSentimentChart from 'CategoricalSentimentChart';
 import CategoricalRegions from 'CategoricalRegions';
 
-var randomScalingFactor = function() {
-        return Math.round(Math.random() * 100);
-};
-
 
 
 var DataVisualization = React.createClass({
 
+
   render: function () {
+
+    {   
+        const { params } = this.props;
+        const { category } = params;
+        console.log(category);
+    }
     
     return (
         <div>

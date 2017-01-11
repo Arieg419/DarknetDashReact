@@ -1,9 +1,25 @@
 import React from 'react';
 
-
+const sentimentClasses = ["active", "success", "danger"];
 var SentimentBreakdown = (props) => {
+
+    const terms = props.entities.map((entity, idx) => {
+        var light = '';
+        if(entity.sentiment.type === "negative") light = "danger";
+        if(entity.sentiment.type === "positive") light = "success";
+        if(entity.sentiment.type === "neutral") light = "active";
+        return (
+            <tr className={`${light}`} key={idx}>
+                <td>{idx}</td>
+                <td>{entity.text}</td>
+                <td>{entity.type}</td>
+                <td>{Math.floor(entity.sentiment.score * 100)}</td>
+            </tr>
+        );
+    });
+
     return (    
-              <div className="col-md-6 .col-md-offset-2">
+              <div className="col-md-5 ">
                         <div className="panel panel-default">
                             <div className="panel-heading">
                                 <h3 className="panel-title">Sentiment Breakdown</h3>
@@ -14,37 +30,14 @@ var SentimentBreakdown = (props) => {
                                         <table className="table">
                                             <thead>
                                                 <tr>
-                                                    <th>#</th>
-                                                    <th>Column heading</th>
-                                                    <th>Column heading</th>
-                                                    <th>Column heading</th>
+                                                    <th>Relavence</th>
+                                                    <th>Term</th>
+                                                    <th>Classification</th>
+                                                    <th>Sentiment</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr className="active">
-                                                    <td>1</td>
-                                                    <td>Column content</td>
-                                                    <td>Column content</td>
-                                                    <td>Column content</td>
-                                                </tr>
-                                                <tr className="success">
-                                                    <td>3</td>
-                                                    <td>Column content</td>
-                                                    <td>Column content</td>
-                                                    <td>Column content</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>4</td>
-                                                    <td>Column content</td>
-                                                    <td>Column content</td>
-                                                    <td>Column content</td>
-                                                </tr>
-                                                <tr className="danger">
-                                                    <td>9</td>
-                                                    <td>Column content</td>
-                                                    <td>Column content</td>
-                                                    <td>Column content</td>
-                                                </tr>
+                                                {terms}
                                             </tbody>
                                         </table>
                                     </div>

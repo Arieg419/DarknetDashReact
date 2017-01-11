@@ -29,10 +29,10 @@ var Aside = () => {
                     </li>
                     <li className="has-submenu"><a href="#"><i className="zmdi zmdi-chart"></i> <span className="nav-label">Data Visualization</span><span className="menu-arrow"></span></a>
                         <ul className="list-unstyled">
-                            <Link to="/datavisualization"><li><i></i> <span>Terrorism</span></li></Link>
-                            <Link to="/datavisualization"><li><i></i> <span>Paedophilia</span></li></Link>
-                            <Link to="/datavisualization"><li><i></i> <span>Weapons</span></li></Link>
-                            <Link to="/datavisualization"><li><i></i> <span>Narcotics</span></li></Link>
+                            <Link to="/dataVisualization/terror"><li><i></i> <span>Terrorism</span></li></Link>
+                            <Link to="/dataVisualization/paedophilia"><li><i></i> <span>Paedophilia</span></li></Link>
+                            <Link to="/dataVisualization/weapons"><li><i></i> <span>Weapons</span></li></Link>
+                            <Link to="/dataVisualization/narcotics"><li><i></i> <span>Narcotics</span></li></Link>
                         </ul>
                     </li>
 
@@ -45,8 +45,6 @@ var Aside = () => {
                         </ul>
                     </li>
 
-                    
-                    
                 </ul>
             </nav>
                 

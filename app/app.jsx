@@ -29,7 +29,7 @@ ReactDOM.render(
     <Route path="/" component={Main}>
       <IndexRoute component={Dashboard}/>
       <Route path="categorylist" component={CategoryTableList}/>
-      <Route path="datavisualization" component={DataVisualization}/>
+      <Route path="dataVisualization/:category" component={DataVisualization}/>
       <Route path="documentprofile" component={DocumentProfile}/>
     </Route>
   </Router>,

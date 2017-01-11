@@ -11,6 +11,7 @@ import CategoricalEntityChart from 'CategoricalEntityChart';
 import CategoricalSentimentChart from 'CategoricalSentimentChart';
 import DocumentProfileProgressBar from  'DocumentProfileProgressBar';
 import DocumentProfileSentimentBreakdown from  'DocumentProfileSentimentBreakdown';
+import DocumentProfileEmotionBreakdown from 'DocumentProfileEmotionBreakdown';
 
 var imgUrl = 'img/terrorism-2.jpg';
 var divStyle = {
@@ -114,6 +115,7 @@ var DocumentProfile = () => {
                                         <div className="row">
                                             <DocumentProfileProgressBar entities={data.entities} />
                                             <DocumentProfileSentimentBreakdown entities={data.entities} />
+                                            <DocumentProfileEmotionBreakdown entities={data.entities} />
                                         </div>
                                     </div>
                                 </div>

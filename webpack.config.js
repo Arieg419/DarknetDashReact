@@ -48,6 +48,7 @@ module.exports = {
       DataVisualization: 'app/components/DataVisualization/DataVisualization.jsx',
       DocumentProfileProgressBar: 'app/components/DocumentProfile/Analytics/ProgressBars.jsx',
       DocumentProfileSentimentBreakdown: 'app/components/DocumentProfile/Analytics/SentimentBreakdown.jsx',
+      DocumentProfileEmotionBreakdown: 'app/components/DocumentProfile/Analytics/EmotionBreakdown.jsx',
       CategoricalDevelopment: 'app/components/DataVisualization/CategoricalDevelopment/CategoricalDevelopmentChart.jsx',
       CategoricalEntityChart: 'app/components/DataVisualization/CategoricalEntityAnalysis/CategoricalEntityChart.jsx',
       CategoricalSentimentChart: 'app/components/DataVisualization/CategoricalSentimentAnalysis/CategoricalSentimentChart.jsx',
