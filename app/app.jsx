@@ -28,7 +28,7 @@ ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
       <IndexRoute component={Dashboard}/>
-      <Route path="categorylist" component={CategoryTableList}/>
+      <Route path="categorylist/:category" component={CategoryTableList}/>
       <Route path="dataVisualization/:category" component={DataVisualization}/>
       <Route path="documentprofile" component={DocumentProfile}/>
     </Route>

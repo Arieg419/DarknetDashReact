@@ -14,6 +14,7 @@
     "bootstrap": "^3.3.7",
     "chart.js": "^1.1.1",
     "express": "^4.13.4",
+    "file-system": "^2.2.2",
     "json-loader": "^0.5.4",
     "react": "^0.14.8",
     "react-bootstrap": "^0.30.6",

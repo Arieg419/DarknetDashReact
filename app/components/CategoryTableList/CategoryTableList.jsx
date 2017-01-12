@@ -17,6 +17,10 @@ import CategoryTableItem from 'CategoryTableItem';
 // Import Data
 import Data from '../testData.json';
 
+
+import allData from 'json-loader!NarcoticsData/arrest_cocaine';
+
+
 var CategoryList = React.createClass({
 
   render: function() {
@@ -42,9 +46,7 @@ var CategoryList = React.createClass({
                                       <th>URL</th>
                                   </tr>
                               </thead>
-                              <tbody>
                                   <CategoryTableItem docs={Data.CategoryTableList} />
-                              </tbody>
                           </table>
                       </div>
 

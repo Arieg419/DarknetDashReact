@@ -18,11 +18,11 @@ var divStyle = {
   backgroundImage: 'url(' + imgUrl + ')'
 };
 
-console.log("Verifying run...hello");
-console.log(data.entities);
 
 
-var DocumentProfile = () => {
+
+var DocumentProfile = (props) => {
+  console.log(props)
   return (
     <div>
         <section className="content">

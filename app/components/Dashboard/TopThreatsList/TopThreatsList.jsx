@@ -35,9 +35,7 @@ var TopThreatList = (props) => {
                                             <th>URL</th>
                                         </tr>
                                         </tbody>
-                                        <tbody>
-                                            <TopThreatsListItem threats={props.data} />
-                                        </tbody>
+                                        <TopThreatsListItem threats={props.data} />
                                 </table>
                             </div>
                         </div>

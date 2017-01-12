@@ -3,9 +3,9 @@ var {Link, IndexLink} = require('react-router');
 
 var CategoryTableItem = React.createClass({
 	renderList: function() {
-		return this.props.docs[0].Paedophilia.map((doc) => {
+		return this.props.docs[0].Paedophilia.map((doc, idx) => {
 				 return (
-					<tr className="gradeX">
+					<tr className="gradeX" key={idx}>
                       <td>Trident</td>
                       <td>Internet
                           Explorer 4.0
@@ -23,9 +23,9 @@ var CategoryTableItem = React.createClass({
 	},
 	render: function() {
 		return (
-			<div>
+			<tbody>
 				{this.renderList()}
-			</div>
+			</tbody>
 		);
 	}
 });

@@ -18,9 +18,9 @@ var TopThreatListItem = React.createClass({
 	},
 	render: function() {
 		return (
-			<div>
+			<tbody>
 				{this.renderList()}
-			</div>
+			</tbody>
 		);
 	}
 });
