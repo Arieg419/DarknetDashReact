@@ -6,13 +6,16 @@ var CategoryTableItem = React.createClass({
 		console.log("In table item");
 		console.log(this.props.docs);
 		return this.props.docs.map((doc, idx) => {
+				 var linkPath = `documentprofile/${this.props.category}/${doc.title}`;
 				 return (
-					<tr className="gradeX" key={idx}>
-                      <td>{doc.title}</td>
-                      <td>{doc.dateFound}</td>
-                      <td>{doc.overAllScore}</td>
-                      <td className="actions">{doc.url.slice(0,20)}</td>
-                    </tr>
+				 	<Link to={linkPath} key={idx}>
+						<tr className="gradeX" className="linkable">
+	                      <td>{doc.title}</td>
+	                      <td>{doc.dateFound}</td>
+	                      <td>{doc.overAllScore}</td>
+	                      <td className="actions">{doc.url.slice(0,20)}</td>
+	                    </tr>
+                    </Link>
 				);
 		});
 	},

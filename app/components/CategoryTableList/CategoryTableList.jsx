@@ -31,14 +31,10 @@ function grabTerrorismData() {
   var isis_destroyes_church_in_iraq = require('json-loader!TerrorData/isis_destroyes_church_in_iraq');
   var sarona_market_terror_attack = require('json-loader!TerrorData/sarona_market_terror_attack');
   var terror_in_new_york = require('json-loader!TerrorData/terror_in_new_york');
-  var terrorists_hiding_inside_a_government_institute = require('json-loader!TerrorData/terrorists_hiding_inside_a_government_institute');
   var terrorists_pretend_being_refugees = require('json-loader!TerrorData/terrorists_pretend_being_refugees');
   var worldwide_condemnation_for_jerusalem_terror_attack = require('json-loader!TerrorData/worldwide_condemnation_for_jerusalem_terror_attack');
-  return [terror_atacks_in_8days, armed_police_in_uk, arrest_of_teens_in_nice_on_suspition_of_terror, bringing_gun_to_school_florida, isis_destroyes_church_in_iraq, sarona_market_terror_attack, terror_in_new_york, terrorists_hiding_inside_a_government_institute, terrorists_pretend_being_refugees, worldwide_condemnation_for_jerusalem_terror_attack];
+  return [terror_atacks_in_8days, armed_police_in_uk, arrest_of_teens_in_nice_on_suspition_of_terror, bringing_gun_to_school_florida, isis_destroyes_church_in_iraq, sarona_market_terror_attack, terror_in_new_york, terrorists_pretend_being_refugees, worldwide_condemnation_for_jerusalem_terror_attack];
 }
-
-
-
 
 function grabNarcdata() {
   var arrest_cocaine = require('json-loader!NarcoticsData/arrest_cocaine'); 
@@ -121,7 +117,7 @@ var CategoryList = (props) => {
                                       <th>URL</th>
                                   </tr>
                               </thead>
-                                  <CategoryTableItem docs={data} />
+                                  <CategoryTableItem docs={data} category={props.params.category}/>
                           </table>
                       </div>
 

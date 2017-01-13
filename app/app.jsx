@@ -30,7 +30,7 @@ ReactDOM.render(
       <IndexRoute component={Dashboard}/>
       <Route path="categorylist/:category" component={CategoryTableList}/>
       <Route path="dataVisualization/:category" component={DataVisualization}/>
-      <Route path="documentprofile" component={DocumentProfile}/>
+      <Route path="documentprofile/:category/:doc" component={DocumentProfile}/>
     </Route>
   </Router>,
   document.getElementById('app')
