@@ -5,6 +5,10 @@
   "url": "http://abcnews.go.com/International/wireStory/germany-investigates-couple-sell-baby-girl-ebay-42775010",
   "totalTransactions": "3",
   "language": "english",
+  "title": "germany-investigates-couple-sell-baby-girl-ebay",
+  "fromDark": true,
+  "dateFound": "Thu Nov 10 2016 05:17:23 GMT+0200 (IST)",
+  "overAllScore": 8.7,
   "entities": [
     {
       "type": "City",

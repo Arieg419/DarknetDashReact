@@ -4,6 +4,10 @@
   "url": "http://www.huffingtonpost.com/kevin-m-ryan/a-website-caught-pimping_b_12391524.html",
   "totalTransactions": "3",
   "language": "english",
+  "title": "a-website-caught-pimping_b_12391524",
+  "fromDark": true,
+  "dateFound": "Sat Jan 07 2017 17:29:16 GMT+0200 (IST)",
+  "overAllScore": 9.5,
   "entities": [
     {
       "type": "Company",

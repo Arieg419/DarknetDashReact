@@ -4,6 +4,10 @@
   "url": "http://news.abs-cbn.com/news/10/11/16/de-lima-7-others-charged-with-drug-trafficking",
   "totalTransactions": "3",
   "language": "english",
+  "title": "7 busted in lima",
+  "fromDark": true,
+  "overAllScore": 9.3,
+  "dateFound": "Fri Oct 14 2016 04:14:32 GMT+0300 (IDT)",
   "entities": [
     {
       "type": "City",

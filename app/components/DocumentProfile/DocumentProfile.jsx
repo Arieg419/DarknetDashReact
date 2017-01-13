@@ -22,7 +22,8 @@ var divStyle = {
 
 
 var DocumentProfile = (props) => {
-  console.log(props)
+  console.log("in doc profile ");
+  console.log(props);
   return (
     <div>
         <section className="content">

@@ -4,6 +4,10 @@
   "url": "http://www.straitstimes.com/singapore/12-year-old-slave-for-us50-he-wants-to-end-this-scourge",
   "totalTransactions": "3",
   "language": "english",
+  "title": "12yr old slave for sale",
+  "fromDark": true,
+  "dateFound": "Sun Oct 23 2016 18:38:04 GMT+0300 (IDT)",
+  "overAllScore": 9.3,
   "entities": [
     {
       "type": "Person",

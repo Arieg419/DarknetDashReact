@@ -5,6 +5,10 @@
  "url": "http://kristof.blogs.nytimes.com/2016/09/28/why-do-we-lock-up-survivors-of-sex-trafficking/?rref=collection%2Ftimestopic%2FHuman%20Trafficking&action=click&contentCollection=timestopics®ion=stream&module=stream_unit&version=latest&contentPlacement=2&pgtype=collection&_r=0",
  "totalTransactions": "3",
  "language": "english",
+ "title": "why-do-we-lock-up-survivors-of-sex-trafficking",
+ "fromDark": false,
+ "dateFound": "Thu Nov 24 2016 03:48:50 GMT+0200 (IST)",
+ "overAllScore": 3.9,
  "entities": [
    {
      "type": "FieldTerminology",

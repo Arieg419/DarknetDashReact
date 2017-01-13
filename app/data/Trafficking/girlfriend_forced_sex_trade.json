@@ -4,6 +4,10 @@
   "url": "http://globalnews.ca/news/2987409/calgary-police-charge-toronto-man-accused-of-forcing-girlfriend-into-sex-trade/",
   "totalTransactions": "3",
   "language": "english",
+  "title": "toronto-man-accused-of-forcing-girlfriend-into-sex-trade",
+  "fromDark": true,
+  "dateFound": "Mon Nov 07 2016 04:52:22 GMT+0200 (IST)",
+  "overAllScore": 9.3,
   "entities": [
     {
       "type": "City",

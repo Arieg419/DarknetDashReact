@@ -56,7 +56,9 @@ module.exports = {
       GoogleMap: 'app/components/DocumentProfile/GoogleMap.jsx',
       DocumentProfile: 'app/components/DocumentProfile/DocumentProfile.jsx',
       FormatDate: 'app/api/formatDate.js',
-      NarcoticsData: 'app/data/Narcotics'
+      NarcoticsData: 'app/data/Narcotics',
+      TraffickingData: 'app/data/Trafficking',
+      TerrorData: 'app/data/Terrorism'
     },
     extensions: ['', '.js', '.jsx', '.json']
   },
