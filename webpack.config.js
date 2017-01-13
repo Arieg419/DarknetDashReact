@@ -56,6 +56,8 @@ module.exports = {
       GoogleMap: 'app/components/DocumentProfile/GoogleMap.jsx',
       DocumentProfile: 'app/components/DocumentProfile/DocumentProfile.jsx',
       FormatDate: 'app/api/formatDate.js',
+      FetchData: 'app/api/getDocs.js',
+      DocRank: 'app/api/calculateDocScore.js',
       NarcoticsData: 'app/data/Narcotics',
       TraffickingData: 'app/data/Trafficking',
       TerrorData: 'app/data/Terrorism'

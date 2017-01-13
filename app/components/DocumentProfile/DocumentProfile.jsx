@@ -1,10 +1,9 @@
 import React from 'react';
 import {Link, IndexLink} from 'react-router';
-var PieChart = require("react-chartjs").Pie;
 
 // Utils
-import data from 'json-loader!NarcoticsData/cocaine';
-import allDates from 'FormatDate';
+import FetchData from 'FetchData';
+import docRank from 'DocRank';
 
 // My Components
 import CategoricalEntityChart from 'CategoricalEntityChart';
@@ -19,11 +18,48 @@ var divStyle = {
 };
 
 
-
-
 var DocumentProfile = (props) => {
-  console.log("in doc profile ");
-  console.log(props);
+  var data;
+  var score = 0;
+  switch(props.params.category) {
+      case "Terror":
+        var dataArr = FetchData.getTerror();
+        dataArr.forEach((doc) => {
+            if(doc.title === props.params.doc) {
+                data = doc;
+                score = docRank(doc, doc.overAllScore);   
+            }
+        });
+        break;
+      case "Trafficking":
+        var dataArr = FetchData.getTrafficking();
+        dataArr.forEach((doc) => {
+            if(doc.title === props.params.doc) {
+                data = doc;  
+                score = docRank(doc, doc.overAllScore);
+            } 
+        });
+        break;
+      case "Weapons":
+        var dataArr = FetchData.getNarcotics();
+        dataArr.forEach((doc) => {
+            if(doc.title === props.params.doc) {
+                data = doc;  
+                score = docRank(doc, doc.overAllScore);
+            } 
+        });
+        break;
+      case "Narcotics":
+        var dataArr = FetchData.getNarcotics();
+        dataArr.forEach((doc) => {
+            if(doc.title === props.params.doc) {
+                data = doc;
+                score = docRank(doc, doc.overAllScore);
+            }
+        });
+        break;
+    }
+
   return (
     <div>
         <section className="content">
@@ -73,8 +109,8 @@ var DocumentProfile = (props) => {
 
                                     <div id="aboutme" className="tab-pane active">
                                     <div className="profile-desk">
-                                        <h1>Rebellion in Yemen</h1>
-                                        <span className="designation">Dark Net, Rebellion, Yemen</span>
+                                        <h1>{data.title}</h1>
+                                        <span className="designation">{data.entities.map((doc) => { var str = doc.type + " "; return str.toLowerCase(); })}</span>
                                         <p>
                                             { data.fromDark ? 'This article was found on the dark net' : 'This article was found on the clearnet'}
                                         </p>
@@ -103,7 +139,7 @@ var DocumentProfile = (props) => {
                                                 </tr>
                                                 <tr>
                                                     <td><b>Overall Ranking</b></td>
-                                                    <td className="ng-binding">7.2</td>
+                                                    <td className="ng-binding">{score}</td>
                                                 </tr>
                                             </tbody>
                                         </table>
