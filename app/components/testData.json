@@ -67,23 +67,23 @@ module.exports = {
   "Categories": [
     {
       "key": 1,
-      "name": "Paedophilia",
-      "traction": 32.4
+      "name": "Weapons",
+      "traction": 0
     },
     {
       "key": 2,
-      "name": "Weapon Trafficking",
-      "traction": 47.1
+      "name": "Trafficking",
+      "traction": 38.23
     },
     {
       "key": 3,
       "name": "Terrorism",
-      "traction": 29.6
+      "traction": 29.4
     },
     {
       "key": 4,
       "name": "Narcotics",
-      "traction": 73.2
+      "traction": 32.3
     }
   ],
   "CategoryTableList": [

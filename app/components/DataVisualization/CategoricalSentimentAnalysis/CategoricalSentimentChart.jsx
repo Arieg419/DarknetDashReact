@@ -44,7 +44,7 @@ var CategoricalSentiment = (props) => {
 	            <div className="portlet">
 	                <div className="portlet-heading">
 	                    <h3 className="portlet-title text-dark">
-	                        Categorical Sentiment Analysis LOL
+	                        Emotional Analysis
 	                    </h3>
 	                    <div className="portlet-widgets">
 	                        <a href="javascript:;" data-toggle="reload"><i className="ion-refresh"></i></a>

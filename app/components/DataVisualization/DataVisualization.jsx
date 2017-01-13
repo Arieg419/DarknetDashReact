@@ -16,25 +16,23 @@ var DataVisualization = React.createClass({
 
   render: function () {
 
-    {   
-        const { params } = this.props;
-        const { category } = params;
-        console.log(category);
-    }
+    const { params } = this.props;
+    const { category } = params;
+    console.log(category);
     
     return (
         <div>
             <section className="content">
                 <div className="wraper container-fluid">
                     <div className="page-title"> 
-                        <h3 className="title">Visializing Weapon Trafficking Data</h3> 
+                        <h3 className="title">Visializing Data By Category</h3> 
                     </div>
-                    <CategoricalDevelopment /> 
+                    <CategoricalDevelopment category={category} /> 
                     <div className="row">
-                      <CategoricalEntityChart />
-                      <CategoricalSentimentChart />  
+                      <CategoricalEntityChart category={category} />
+                      <CategoricalSentimentChart category={category} />  
                     </div>
-                    <CategoricalRegions/> 
+                    <CategoricalRegions category={category} /> 
                 </div> 
             </section>
         </div>

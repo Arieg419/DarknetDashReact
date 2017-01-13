@@ -2,13 +2,28 @@ var React = require('react');
 import { Sparklines, SparklinesLine, SparklinesReferenceLine, SparklinesBars } from 'react-sparklines';
 
 var CategoricalDevelopment = (props) => {
+    var data;
+    switch(props.category) {
+        case("terror"):
+            data = [1,4,9,11];
+            break;
+        case("narcotics"):
+            data = [4,8,11,13];
+            break;
+        case("trafficking"):
+            data = [3,8,10,11];
+            break;
+        case("weapons"):
+            data = [3,8,10,11];
+            break;
+    }
     return (
         <div className="row">                
             <div className="col-lg-12 centerText">
                 <div className="portlet">
                     <div className="portlet-heading">
                         <h3 className="portlet-title text-dark">
-                            Categorical Development LOL
+                            Cumalated Threats
                         </h3>
                         <div className="portlet-widgets">
                             <a href="javascript:;" data-toggle="reload"><i className="ion-refresh"></i></a>
@@ -21,8 +36,8 @@ var CategoricalDevelopment = (props) => {
                     </div>
                     <div id="portlet4" className="panel-collapse collapse in">
                         <div className="portlet-body">
-                        <Sparklines data={[11,22,2,45,32,65]}>
-                            <SparklinesLine color="#253e56" />
+                        <Sparklines data={data}>
+                            <SparklinesLine color="#AA73C3" />
                         </Sparklines>
                         </div>
                     </div>

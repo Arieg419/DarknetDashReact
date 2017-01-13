@@ -16,6 +16,7 @@ import CategoryTableItem from 'CategoryTableItem';
 
 // Import Utils
 import FetchData from 'FetchData';
+import GetAvg from 'MetricCalculator';
 
 
 var CategoryList = (props) => {

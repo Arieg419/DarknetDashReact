@@ -30,7 +30,7 @@ var Dashboard = React.createClass({
                                     <div className="portlet">
                                         <div className="portlet-heading">
                                             <h3 className="portlet-title text-dark text-uppercase">
-                                                Weekly Threat Report
+                                                Cumulated Threats
                                             </h3>
                                             <div className="portlet-widgets">
                                                 <a href="javascript:;" data-toggle="reload"><i className="ion-refresh"></i></a>
@@ -43,27 +43,26 @@ var Dashboard = React.createClass({
                                         </div>
                                         <div id="portlet1" className="panel-collapse collapse in">
                                             <div className="portlet-body">
-                                                <Sparklines  data={[11,22,2,45,32,65]}>
-                                                    <SparklinesLine />
-                                                    <SparklinesReferenceLine type="avg" />
+                                                <Sparklines  data={[8,20,29, 35]}>
+                                                    <SparklinesLine color="#FCB274" />
                                                 </Sparklines>
 
                                                 <div className="row text-center m-t-30 m-b-30">
                                                     <div className="col-sm-3 col-xs-6">
-                                                        <h4> 126</h4>
-                                                        <small className="text-muted"> Today's Threat</small>
+                                                        <h4>8</h4>
+                                                        <small className="text-muted">October, 2016</small>
                                                     </div>
                                                     <div className="col-sm-3 col-xs-6">
-                                                        <h4> 967</h4>
-                                                        <small className="text-muted">This Week's Threat</small>
+                                                        <h4>20</h4>
+                                                        <small className="text-muted">November, 2016</small>
                                                     </div>
                                                     <div className="col-sm-3 col-xs-6">
-                                                        <h4> 4500</h4>
-                                                        <small className="text-muted">This Month's Threat</small>
+                                                        <h4>29</h4>
+                                                        <small className="text-muted">December, 2016</small>
                                                     </div>
                                                     <div className="col-sm-3 col-xs-6">
-                                                        <h4> 87,000</h4>
-                                                        <small className="text-muted">This Year's Threat</small>
+                                                        <h4>35</h4>
+                                                        <small className="text-muted">January, 2017</small>
                                                     </div>
                                                 </div>
                                             </div>
@@ -77,7 +76,7 @@ var Dashboard = React.createClass({
                                     <div className="portlet">
                                         <div className="portlet-heading">
                                             <h3 className="portlet-title text-dark text-uppercase">
-                                                Yearly Crime Report
+                                                Category Averages
                                             </h3>
                                             <div className="portlet-widgets">
                                                 <a href="javascript:;" data-toggle="reload"><i className="ion-refresh"></i></a>
@@ -90,26 +89,26 @@ var Dashboard = React.createClass({
                                         </div>
                                         <div id="portlet2" className="panel-collapse collapse in">
                                             <div className="portlet-body">
-                                                <Sparklines data={[59, 12, 2, 70,24,32,63]}>
-                                                  <SparklinesBars />
+                                                <Sparklines data={[-3.8,-3.2,-4.37, -9]}>
+                                                  <SparklinesBars color="#86C98B" style={{fill: "#86C98B"}}/>
                                                 </Sparklines>
                                                 
                                                 <div className="row text-center m-t-30 m-b-30">
                                                     <div className="col-sm-3 col-xs-6">
-                                                        <h4> 126</h4>
-                                                        <small className="text-muted"> Today's Crime</small>
+                                                        <h4> 3.8</h4>
+                                                        <small className="text-muted">Terrorism</small>
                                                     </div>
                                                     <div className="col-sm-3 col-xs-6">
-                                                        <h4> 967</h4>
-                                                        <small className="text-muted">This Week's Crime</small>
+                                                        <h4> 3.2</h4>
+                                                        <small className="text-muted">Narcotics</small>
                                                     </div>
                                                     <div className="col-sm-3 col-xs-6">
-                                                        <h4> 4500</h4>
-                                                        <small className="text-muted">This Month's Crime</small>
+                                                        <h4> 4.37</h4>
+                                                        <small className="text-muted">Human Trafficking</small>
                                                     </div>
                                                     <div className="col-sm-3 col-xs-6">
-                                                        <h4> 87,000</h4>
-                                                        <small className="text-muted">This Year's Crime</small>
+                                                        <h4> 6.2</h4>
+                                                        <small className="text-muted">Weapons</small>
                                                     </div>
                                                 </div>
                                             </div>

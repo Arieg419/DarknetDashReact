@@ -5,46 +5,54 @@ var pieOptions = {
             animatable: true,
 };
 
-var pieData = [
-              {
-                  value: 300,
-                  color:"#F7464A",
-                  highlight: "#FF5A5E",
-                  label: "Red"
-              },
-              {
-                  value: 50,
-                  color: "#46BFBD",
-                  highlight: "#5AD3D1",
-                  label: "Green"
-              },
-              {
-                  value: 100,
-                  color: "#FDB45C",
-                  highlight: "#FFC870",
-                  label: "Yellow"
-              },
-              {
-                  value: 40,
-                  color: "#949FB1",
-                  highlight: "#A8B3C5",
-                  label: "Grey"
-              },
-              {
-                  value: 120,
-                  color: "#4D5360",
-                  highlight: "#616774",
-                  label: "Dark Grey"
-              }
-];
 
 var CategoricalEntity = (props) => {
+    var pieData;
+    switch(props.category) {
+            case("terror"):
+              pieData = [
+                {value: 300, color:"#F13C6E", highlight: "#FF5A5E", label: "Severe"},
+                {value: 50, color: "#E4BB40", highlight: "#FFC870",label: "Elevated"},
+                {value: 100, color: "#3BC0C3", highlight: "#5AD3D1", label: "High"},
+                {value: 40, color: "#615CA8", highlight: "#A8B3C5", label: "Guarded"},
+                {value: 120, color: "#1A2942", highlight: "#616774",label: "Low"}
+              ];
+              break;
+            case("narcotics"):
+              pieData = [
+                {value: 300, color:"#F13C6E", highlight: "#FF5A5E", label: "Severe"},
+                {value: 50, color: "#E4BB40", highlight: "#FFC870",label: "Elevated"},
+                {value: 100, color: "#3BC0C3", highlight: "#5AD3D1", label: "High"},
+                {value: 40, color: "#615CA8", highlight: "#A8B3C5", label: "Guarded"},
+                {value: 120, color: "#1A2942", highlight: "#616774",label: "Low"}
+              ];           
+              break;
+            case("trafficking"):
+              pieData = [
+                {value: 300, color:"#F13C6E", highlight: "#FF5A5E", label: "Severe"},
+                {value: 50, color: "#E4BB40", highlight: "#FFC870",label: "Elevated"},
+                {value: 100, color: "#3BC0C3", highlight: "#5AD3D1", label: "High"},
+                {value: 40, color: "#615CA8", highlight: "#A8B3C5", label: "Guarded"},
+                {value: 120, color: "#1A2942", highlight: "#616774",label: "Low"}
+              ];
+              break;
+            case("weapons"):
+              pieData = [
+                {value: 300, color:"#F13C6E", highlight: "#FF5A5E", label: "Severe"},
+                {value: 50, color: "#E4BB40", highlight: "#FFC870",label: "Elevated"},
+                {value: 100, color: "#3BC0C3", highlight: "#5AD3D1", label: "High"},
+                {value: 40, color: "#615CA8", highlight: "#A8B3C5", label: "Guarded"},
+                {value: 120, color: "#1A2942", highlight: "#616774",label: "Low"}
+              ];
+              break;
+    }
+
     return (
-	        <div className="col-lg-6 centerText">
+          <div className="col-lg-6 centerText">
 	            <div className="portlet">
 	                <div className="portlet-heading">
 	                    <h3 className="portlet-title text-dark">
-	                        Categorical Entity Analysis
+	                        Document Threat Levels
 	                    </h3>
 	                    <div className="portlet-widgets">
 	                        <a href="javascript:;" data-toggle="reload"><i className="ion-refresh"></i></a>

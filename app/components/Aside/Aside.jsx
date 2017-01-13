@@ -8,7 +8,7 @@ var Aside = () => {
             <div className="logo">
                 <a href="index.html" className="logo-expanded">
                     <i className="ion-social-buffer"></i>
-                    <span className="nav-label">Darknet Dash</span>
+                    <span className="nav-label">DNA</span>
                 </a>
             </div>
         
@@ -33,15 +33,6 @@ var Aside = () => {
                             <Link to="/dataVisualization/trafficking"><li><i></i> <span>Trafficking</span></li></Link>
                             <Link to="/dataVisualization/weapons"><li><i></i> <span>Weapons</span></li></Link>
                             <Link to="/dataVisualization/narcotics"><li><i></i> <span>Narcotics</span></li></Link>
-                        </ul>
-                    </li>
-
-                    <li className="has-submenu"><a href="#"><i className="zmdi zmdi-chart"></i> <span className="nav-label">Document Profile</span><span className="menu-arrow"></span></a>
-                        <ul className="list-unstyled">
-                            <Link to="/documentprofile"><li><i></i> <span>Terrorism</span></li></Link>
-                            <Link to="/documentprofile"><li><i></i> <span>Trafficking</span></li></Link>
-                            <Link to="/documentprofile"><li><i></i> <span>Weapons</span></li></Link>
-                            <Link to="/documentprofile"><li><i></i> <span>Narcotics</span></li></Link>
                         </ul>
                     </li>
 
