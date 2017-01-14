@@ -8,7 +8,9 @@ function grabTerrorismData() {
   var terror_in_new_york = require('json-loader!TerrorData/terror_in_new_york');
   var terrorists_pretend_being_refugees = require('json-loader!TerrorData/terrorists_pretend_being_refugees');
   var worldwide_condemnation_for_jerusalem_terror_attack = require('json-loader!TerrorData/worldwide_condemnation_for_jerusalem_terror_attack');
-  return [terror_atacks_in_8days, armed_police_in_uk, arrest_of_teens_in_nice_on_suspition_of_terror, bringing_gun_to_school_florida, isis_destroyes_church_in_iraq, sarona_market_terror_attack, terror_in_new_york, terrorists_pretend_being_refugees, worldwide_condemnation_for_jerusalem_terror_attack];
+  var besa_mafia = require('json-loader!TerrorData/besa_mafia');
+  var personalIsisData = require('json-loader!TerrorData/personalIsisData');
+  return [personalIsisData, besa_mafia, terror_atacks_in_8days, armed_police_in_uk, arrest_of_teens_in_nice_on_suspition_of_terror, bringing_gun_to_school_florida, isis_destroyes_church_in_iraq, sarona_market_terror_attack, terror_in_new_york, terrorists_pretend_being_refugees, worldwide_condemnation_for_jerusalem_terror_attack];
 }
 
 function grabNarcdata() {
@@ -23,8 +25,13 @@ function grabNarcdata() {
   var drug_overdise = require('json-loader!NarcoticsData/drug_overdise'); 
   var drug_pusherers_killed = require('json-loader!NarcoticsData/drug_pusherers_killed'); 
   var fentanyl_pills_drug = require('json-loader!NarcoticsData/fentanyl_pills_drug'); 
+  var golden_age_drug_trade = require('json-loader!NarcoticsData/golden_age_drug_trade');
   var golden_age_drug_trade = require('json-loader!NarcoticsData/golden_age_drug_trade'); 
-  return [arrest_cocaine, Auusi_app, Bilibid_drug_probe, co_market_diabetes_drug, cocaine, country_servant, De_Lima_drugs, drug_abuse, drug_overdise, drug_pusherers_killed, fentanyl_pills_drug, golden_age_drug_trade];
+  var Dump_Street = require('json-loader!NarcoticsData/Dump_Street'); 
+  var bitpharma = require('json-loader!NarcoticsData/bitpharma'); 
+  var cannabisUK = require('json-loader!NarcoticsData/cannabisUK'); 
+  var peopleDrugStore = require('json-loader!NarcoticsData/peopleDrugStore'); 
+  return [peopleDrugStore, cannabisUK, bitpharma, Dump_Street, arrest_cocaine, Auusi_app, Bilibid_drug_probe, co_market_diabetes_drug, cocaine, country_servant, De_Lima_drugs, drug_abuse, drug_overdise, drug_pusherers_killed, fentanyl_pills_drug, golden_age_drug_trade];
 }
 
 function grabTraffickingdata() {

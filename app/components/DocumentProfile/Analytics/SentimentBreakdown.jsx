@@ -5,6 +5,7 @@ var SentimentBreakdown = (props) => {
 
     const terms = props.entities.map((entity, idx) => {
         var light = '';
+        if(!entity.hasOwnProperty("sentiment")) return (<tr key={idx}></tr>);
         if(entity.sentiment.type === "negative") light = "danger";
         if(entity.sentiment.type === "positive") light = "success";
         if(entity.sentiment.type === "neutral") light = "active";
