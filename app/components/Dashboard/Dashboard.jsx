@@ -9,6 +9,7 @@ import 'script!omeradded/inline.js';
 
 // Import Statid Data for Dynamic Render Testing
 import Data from '../testData.json';
+import SevereThreats from 'SevereThreats';
 
 // Import Page Specific Components
 import TopThreatList from 'TopThreatList';
@@ -123,7 +124,7 @@ var Dashboard = React.createClass({
 
                             <CategoryDisplayList categories={Data.Categories} />
 
-                            <TopThreatList data={Data.Documents} />
+                            <TopThreatList data={SevereThreats()} />
 
                       
                              

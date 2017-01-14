@@ -39,9 +39,13 @@ var DocumentProfileEmotionWidgets = (props) => {
     });
 
     return (
-           <div className="col-md-4 text-center">
-              {terms}
-            </div> 
+
+          <div className="col-md-4 centerText text-center">
+              <h4 className="m-b-15 text-uppercase">Emotion Breakdown for Terms</h4>
+
+             {terms}
+
+          </div> 
     );
 };
 

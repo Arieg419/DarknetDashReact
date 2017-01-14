@@ -7,11 +7,11 @@ var TopThreatListItem = React.createClass({
 				 return (
 					<tr key={threat.key}>
 			            <td>{threat.key}</td>
-			            <td>{threat.documentName} </td>
-			            <td>{threat.discoveryData}</td>
-			            <td>{threat.darkClear}</td>
-			            <td><span className={threat.classification}>{threat.overallScore}</span></td>
-			            <td>{threat.URL}</td>
+			            <td>{threat.title} </td>
+			            <td>{threat.dateFound}</td>
+			            <td>{ threat.fromDark ? "Darknet" : "Clearnet" }</td>
+			            <td><span className="label label-warning">{threat.overAllScore}</span></td>
+			            <td>{threat.url}</td>
 		        	</tr>
 				);
 		});

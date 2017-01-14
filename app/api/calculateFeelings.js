@@ -11,7 +11,6 @@ function calcEmotion(docs) {
 						if(entity.emotions.hasOwnProperty('anger'))
 							angerScore += parseFloat(entity.emotions.anger);
 						if(entity.emotions.hasOwnProperty('disgust'))
-							console.log(entity.emotions.disgust);
 							disgustScore += parseFloat(entity.emotions.disgust);
 						if(entity.emotions.hasOwnProperty('fear'))
 							fearScore += parseFloat(entity.emotions.fear);	
@@ -23,7 +22,6 @@ function calcEmotion(docs) {
 				})
 			}
 		});
-		console.log("final scores...");
 		angerScore = parseFloat(angerScore).toFixed(2);
 		disgustScore = parseFloat(disgustScore).toFixed(2);
 		fearScore = parseFloat(fearScore).toFixed(2);

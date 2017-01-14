@@ -58,6 +58,7 @@ module.exports = {
       FormatDate: 'app/api/formatDate.js',
       FetchData: 'app/api/getDocs.js',
       DocRank: 'app/api/calculateDocScore.js',
+      SevereThreats: 'app/api/getHighestRanked.js',
       MetricCalculator: 'app/api/calculateCategoryMetrics.js',
       EmotionCalculator: 'app/api/calculateFeelings.js',
       NarcoticsData: 'app/data/Narcotics',

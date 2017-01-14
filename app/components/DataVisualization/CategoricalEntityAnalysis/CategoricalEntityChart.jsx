@@ -17,9 +17,6 @@ var CategoricalEntity = (props) => {
             case("terror"):
               data = FetchData.getTerror();
               res = EmotionCalculator(data);
-              console.log("Terrror");
-              console.log(data);
-              console.log(res);
               pieData = [
                 {value: res[0], color:"#F13C6E", highlight: "#FF5A5E", label: "Severe"},
                 {value: res[1], color: "#E4BB40", highlight: "#FFC870",label: "Elevated"},
@@ -31,9 +28,6 @@ var CategoricalEntity = (props) => {
             case("narcotics"):
               data = FetchData.getNarcotics();
               res = EmotionCalculator(data);
-              console.log("Narcotics");
-              console.log(data);
-              console.log(res);
               pieData = [
                 {value: res[0], color:"#F13C6E", highlight: "#FF5A5E", label: "Severe"},
                 {value: res[1], color: "#E4BB40", highlight: "#FFC870",label: "Elevated"},
@@ -45,9 +39,6 @@ var CategoricalEntity = (props) => {
             case("trafficking"):
               data = FetchData.getTrafficking();
               res = EmotionCalculator(data);
-              console.log("Trafficking");
-              console.log(data);
-              console.log(res);
               pieData = [
                 {value: res[0], color:"#F13C6E", highlight: "#FF5A5E", label: "Severe"},
                 {value: res[1], color: "#E4BB40", highlight: "#FFC870",label: "Elevated"},
@@ -59,9 +50,6 @@ var CategoricalEntity = (props) => {
             case("weapons"):
               data = FetchData.getNarcotics();
               res = EmotionCalculator(data);
-              console.log("Weapons");
-              console.log(data);
-              console.log(res);
               pieData = [
                 {value: res[0], color:"#F13C6E", highlight: "#FF5A5E", label: "Severe"},
                 {value: res[1], color: "#E4BB40", highlight: "#FFC870",label: "Elevated"},

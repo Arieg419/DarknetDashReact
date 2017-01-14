@@ -3,6 +3,8 @@ var React = require('react');
 import TopThreatsListItem from 'TopThreatsListItem';
 
 var TopThreatList = (props) => {
+    console.log("new data is...");
+    console.log(props.data);
     return (
         <div className="row">                       
             <div className="col-lg-12">
@@ -10,7 +12,7 @@ var TopThreatList = (props) => {
                 <div className="portlet">
                     <div className="portlet-heading">
                         <h3 className="portlet-title text-dark text-uppercase">
-                            Projects
+                            Severe Threats Analyzed
                         </h3>
                         <div className="portlet-widgets">
                             <a href="javascript:;" data-toggle="reload"><i className="ion-refresh"></i></a>

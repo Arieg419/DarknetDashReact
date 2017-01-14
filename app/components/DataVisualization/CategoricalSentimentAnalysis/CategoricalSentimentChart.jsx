@@ -17,9 +17,6 @@ var CategoricalEmotion = (props) => {
             case("terror"):
               data = FetchData.getTerror();
               res = EmotionCalculator(data);
-              console.log("Terrror");
-              console.log(data);
-              console.log(res);
               pieData = [
                 {value: res[0], color:"#F08390", highlight: "#FDEDEF", label: "Anger"},
                 {value: res[1], color: "#FA7E18", highlight: "#FCB072",label: "Disgust"},
@@ -31,9 +28,6 @@ var CategoricalEmotion = (props) => {
             case("narcotics"):
               data = FetchData.getNarcotics();
               res = EmotionCalculator(data);
-              console.log("Narcotics");
-              console.log(data);
-              console.log(res);
               pieData = [
                 {value: res[0], color:"#F08390", highlight: "#FDEDEF", label: "Anger"},
                 {value: res[1], color: "#FA7E18", highlight: "#FCB072",label: "disgust"},
@@ -45,9 +39,6 @@ var CategoricalEmotion = (props) => {
             case("trafficking"):
               data = FetchData.getTrafficking();
               res = EmotionCalculator(data);
-              console.log("Trafficking");
-              console.log(data);
-              console.log(res);
               pieData = [
                 {value: res[0], color:"#F08390", highlight: "#FDEDEF", label: "Anger"},
                 {value: res[1], color: "#FA7E18", highlight: "#FCB072",label: "disgust"},
@@ -59,9 +50,6 @@ var CategoricalEmotion = (props) => {
             case("weapons"):
               data = FetchData.getNarcotics();
               res = EmotionCalculator(data);
-              console.log("Weapons");
-              console.log(data);
-              console.log(res);
               pieData = [
                 {value: res[0], color:"#F08390", highlight: "#FDEDEF", label: "Anger"},
                 {value: res[1], color: "#FA7E18", highlight: "#FCB072",label: "disgust"},
