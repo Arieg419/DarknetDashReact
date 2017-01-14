@@ -1,68 +1,101 @@
+// Components and Libraries
 import React from 'react';
 var PieChart = require("react-chartjs").Pie;
+
+// Utils
+import FetchData from 'FetchData';
+import EmotionCalculator from 'EmotionCalculator';
 
 var pieOptions = {
             animatable: true,
 };
 
-var pieData = [
-              {
-                  value: 300,
-                  color:"#F7464A",
-                  highlight: "#FF5A5E",
-                  label: "Red"
-              },
-              {
-                  value: 50,
-                  color: "#46BFBD",
-                  highlight: "#5AD3D1",
-                  label: "Green"
-              },
-              {
-                  value: 100,
-                  color: "#FDB45C",
-                  highlight: "#FFC870",
-                  label: "Yellow"
-              },
-              {
-                  value: 40,
-                  color: "#949FB1",
-                  highlight: "#A8B3C5",
-                  label: "Grey"
-              },
-              {
-                  value: 120,
-                  color: "#4D5360",
-                  highlight: "#616774",
-                  label: "Dark Grey"
-              }
-];
 
-var CategoricalSentiment = (props) => {
+var CategoricalEmotion = (props) => {
+    var pieData, data, res;
+    switch(props.category) {
+            case("terror"):
+              data = FetchData.getTerror();
+              res = EmotionCalculator(data);
+              console.log("Terrror");
+              console.log(data);
+              console.log(res);
+              pieData = [
+                {value: res[0], color:"#F08390", highlight: "#FDEDEF", label: "Anger"},
+                {value: res[1], color: "#FA7E18", highlight: "#FCB072",label: "Disgust"},
+                {value: res[2], color: "#79C37E", highlight: "#ACDAAF", label: "Fear"},
+                {value: res[3], color: "#218EDC", highlight: "#E8F4FC", label: "Joy"},
+                {value: res[4], color: "#9956B6", highlight: "#F4ECF7",label: "Sadness"}
+              ];
+              break;
+            case("narcotics"):
+              data = FetchData.getNarcotics();
+              res = EmotionCalculator(data);
+              console.log("Narcotics");
+              console.log(data);
+              console.log(res);
+              pieData = [
+                {value: res[0], color:"#F08390", highlight: "#FDEDEF", label: "Anger"},
+                {value: res[1], color: "#FA7E18", highlight: "#FCB072",label: "disgust"},
+                {value: res[2], color: "#79C37E", highlight: "#ACDAAF", label: "Fear"},
+                {value: res[3], color: "#218EDC", highlight: "#E8F4FC", label: "Joy"},
+                {value: res[4], color: "#9956B6", highlight: "#F4ECF7",label: "Sadness"}
+              ];           
+              break;
+            case("trafficking"):
+              data = FetchData.getTrafficking();
+              res = EmotionCalculator(data);
+              console.log("Trafficking");
+              console.log(data);
+              console.log(res);
+              pieData = [
+                {value: res[0], color:"#F08390", highlight: "#FDEDEF", label: "Anger"},
+                {value: res[1], color: "#FA7E18", highlight: "#FCB072",label: "disgust"},
+                {value: res[2], color: "#79C37E", highlight: "#ACDAAF", label: "Fear"},
+                {value: res[3], color: "#218EDC", highlight: "#E8F4FC", label: "Joy"},
+                {value: res[4], color: "#9956B6", highlight: "#F4ECF7",label: "Sadness"}
+              ];
+              break;
+            case("weapons"):
+              data = FetchData.getNarcotics();
+              res = EmotionCalculator(data);
+              console.log("Weapons");
+              console.log(data);
+              console.log(res);
+              pieData = [
+                {value: res[0], color:"#F08390", highlight: "#FDEDEF", label: "Anger"},
+                {value: res[1], color: "#FA7E18", highlight: "#FCB072",label: "disgust"},
+                {value: res[2], color: "#79C37E", highlight: "#ACDAAF", label: "Fear"},
+                {value: res[3], color: "#218EDC", highlight: "#E8F4FC", label: "Joy"},
+                {value: res[4], color: "#9956B6", highlight: "#F4ECF7",label: "Sadness"}
+              ];
+              break;
+    }
+
     return (
-	        <div className="col-lg-6 centerText">
-	            <div className="portlet">
-	                <div className="portlet-heading">
-	                    <h3 className="portlet-title text-dark">
-	                        Emotional Analysis
-	                    </h3>
-	                    <div className="portlet-widgets">
-	                        <a href="javascript:;" data-toggle="reload"><i className="ion-refresh"></i></a>
-	                        <span className="divider"></span>
-	                        <a data-toggle="collapse" data-parent="#accordion1" href="#portlet4"><i className="ion-minus-round"></i></a>
-	                        <span className="divider"></span>
-	                        <a href="#" data-toggle="remove"><i className="ion-close-round"></i></a>
-	                    </div>
-	                    <div className="clearfix"></div>
-	                </div>
-	                <div id="portlet4" className="panel-collapse collapse in">
-	                    <div className="portlet-body">
-	                    <PieChart data={pieData} options={pieOptions}/>
-	                    </div>
-	                </div>
-	            </div> 
-        	</div>
+          <div className="col-lg-6 centerText">
+              <div className="portlet">
+                  <div className="portlet-heading">
+                      <h3 className="portlet-title text-dark">
+                          Emotional Analytics Average for {props.category}
+                      </h3>
+                      <div className="portlet-widgets">
+                          <a href="javascript:;" data-toggle="reload"><i className="ion-refresh"></i></a>
+                          <span className="divider"></span>
+                          <a data-toggle="collapse" data-parent="#accordion1" href="#portlet4"><i className="ion-minus-round"></i></a>
+                          <span className="divider"></span>
+                          <a href="#" data-toggle="remove"><i className="ion-close-round"></i></a>
+                      </div>
+                      <div className="clearfix"></div>
+                  </div>
+                  <div id="portlet4" className="panel-collapse collapse in">
+                      <div className="portlet-body">
+                      <PieChart data={pieData} options={pieOptions}/>
+                      </div>
+                  </div>
+              </div> 
+          </div>
     );
 };
 
-module.exports = CategoricalSentiment;
+module.exports = CategoricalEmotion;

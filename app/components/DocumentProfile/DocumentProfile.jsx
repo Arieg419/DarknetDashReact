@@ -12,10 +12,7 @@ import DocumentProfileProgressBar from  'DocumentProfileProgressBar';
 import DocumentProfileSentimentBreakdown from  'DocumentProfileSentimentBreakdown';
 import DocumentProfileEmotionBreakdown from 'DocumentProfileEmotionBreakdown';
 
-var imgUrl = 'img/terrorism-2.jpg';
-var divStyle = {
-  backgroundImage: 'url(' + imgUrl + ')'
-};
+var divStyle, imgUrl, profileimg;
 
 
 var DocumentProfile = (props) => {
@@ -30,6 +27,13 @@ var DocumentProfile = (props) => {
                 score = docRank(doc, doc.overAllScore);   
             }
         });
+        imgUrl = 'img/isis.jpg';
+        divStyle = {
+          backgroundImage: 'url(' + imgUrl + ')'
+        };
+        profileimg = {
+            profile: 'img/terrorist.jpg'
+        };
         break;
       case "Trafficking":
         var dataArr = FetchData.getTrafficking();
@@ -39,6 +43,13 @@ var DocumentProfile = (props) => {
                 score = docRank(doc, doc.overAllScore);
             } 
         });
+        imgUrl = 'img/trafficking.jpeg';
+        divStyle = {
+          backgroundImage: 'url(' + imgUrl + ')'
+        };
+        profileimg = {
+            profile: 'img/htr.jpg'
+        };
         break;
       case "Weapons":
         var dataArr = FetchData.getNarcotics();
@@ -48,6 +59,13 @@ var DocumentProfile = (props) => {
                 score = docRank(doc, doc.overAllScore);
             } 
         });
+        imgUrl = 'img/gun.jpeg';
+        divStyle = {
+          backgroundImage: 'url(' + imgUrl + ')'
+        };
+        profileimg = {
+            profile: 'img/weaponsprof'
+        };
         break;
       case "Narcotics":
         var dataArr = FetchData.getNarcotics();
@@ -57,6 +75,13 @@ var DocumentProfile = (props) => {
                 score = docRank(doc, doc.overAllScore);
             }
         });
+        imgUrl = 'img/pills.jpg';
+        divStyle = {
+          backgroundImage: 'url(' + imgUrl + ')'
+        };
+        profileimg = {
+            profile: 'img/walter.jpg'
+        };
         break;
     }
 
@@ -70,7 +95,7 @@ var DocumentProfile = (props) => {
                           <span className="bg-picture-overlay"></span>
                           <div className="box-layout meta bottom">
                             <div className="col-sm-6 clearfix">
-                              <span className="img-wrapper pull-left m-r-15"><img src="img/terrorist.jpg" alt="" styles={{width:"64px"}} className="br-radius"/></span>
+                              <span className="img-wrapper pull-left m-r-15"><img src={profileimg.profile} alt="" styles={{width:"64px"}} className="br-radius"/></span>
                               <div className="media-body">
                                 <h3 className="text-white mb-2 m-t-10 ellipsis">{data.title}</h3>
                                 <h5 className="text-white"> 7.3</h5>
@@ -102,7 +127,6 @@ var DocumentProfile = (props) => {
                                 <ul className="nav nav-tabs profile-tabs">
                                     <li className="active"><a data-toggle="tab" href="#aboutme">Meta Data</a></li>
                                     <li className=""><a data-toggle="tab" href="#edit-profile">Sentiment Analytics</a></li>
-                                    <li className=""><a data-toggle="tab" href="#projects">Links found</a></li>
                                 </ul>
 
                                 <div className="tab-content m-0"> 
@@ -157,77 +181,6 @@ var DocumentProfile = (props) => {
                                     </div>
                                 </div>
 
-
-                                
-                                <div id="projects" className="tab-pane">
-                                    <div className="row m-t-10">
-                                        <div className="col-md-12">
-                                            <div className="portlet"> 
-                                                <div id="portlet2" className="panel-collapse collapse in">
-                                                    <div className="portlet-body">
-                                                        <div className="table-responsive">
-                                                            <table className="table">
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th>#</th>
-                                                                        <th>Project Name</th>
-                                                                        <th>Start Date</th>
-                                                                        <th>Due Date</th>
-                                                                        <th>Status</th>
-                                                                        <th>Assign</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td>1</td>
-                                                                        <td>Velonic Admin</td>
-                                                                        <td>01/01/2015</td>
-                                                                        <td>07/05/2015</td>
-                                                                        <td><span className="label label-info">Work in Progress</span></td>
-                                                                        <td>Coderthemes</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>2</td>
-                                                                        <td>Velonic Frontend</td>
-                                                                        <td>01/01/2015</td>
-                                                                        <td>07/05/2015</td>
-                                                                        <td><span className="label label-success">Pending</span></td>
-                                                                        <td>Coderthemes</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>3</td>
-                                                                        <td>Velonic Admin</td>
-                                                                        <td>01/01/2015</td>
-                                                                        <td>07/05/2015</td>
-                                                                        <td><span className="label label-pink">Done</span></td>
-                                                                        <td>Coderthemes</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>4</td>
-                                                                        <td>Velonic Frontend</td>
-                                                                        <td>01/01/2015</td>
-                                                                        <td>07/05/2015</td>
-                                                                        <td><span className="label label-purple">Work in Progress</span></td>
-                                                                        <td>Coderthemes</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>5</td>
-                                                                        <td>Velonic Admin</td>
-                                                                        <td>01/01/2015</td>
-                                                                        <td>07/05/2015</td>
-                                                                        <td><span className="label label-warning">Coming soon</span></td>
-                                                                        <td>Coderthemes</td>
-                                                                    </tr>
-                                                                    
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
              
                         </div> 

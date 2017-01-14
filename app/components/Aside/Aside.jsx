@@ -8,7 +8,7 @@ var Aside = () => {
             <div className="logo">
                 <a href="index.html" className="logo-expanded">
                     <i className="ion-social-buffer"></i>
-                    <span className="nav-label">DNA</span>
+                    <span className="nav-label">Darknet Dash</span>
                 </a>
             </div>
         

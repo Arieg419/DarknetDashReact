@@ -1,5 +1,10 @@
+// Components and Libraries
 import React from 'react';
 var PieChart = require("react-chartjs").Pie;
+
+// Utils
+import FetchData from 'FetchData';
+import EmotionCalculator from 'EmotionCalculator';
 
 var pieOptions = {
             animatable: true,
@@ -7,42 +12,62 @@ var pieOptions = {
 
 
 var CategoricalEntity = (props) => {
-    var pieData;
+    var pieData, data, res;
     switch(props.category) {
             case("terror"):
+              data = FetchData.getTerror();
+              res = EmotionCalculator(data);
+              console.log("Terrror");
+              console.log(data);
+              console.log(res);
               pieData = [
-                {value: 300, color:"#F13C6E", highlight: "#FF5A5E", label: "Severe"},
-                {value: 50, color: "#E4BB40", highlight: "#FFC870",label: "Elevated"},
-                {value: 100, color: "#3BC0C3", highlight: "#5AD3D1", label: "High"},
-                {value: 40, color: "#615CA8", highlight: "#A8B3C5", label: "Guarded"},
-                {value: 120, color: "#1A2942", highlight: "#616774",label: "Low"}
+                {value: res[0], color:"#F13C6E", highlight: "#FF5A5E", label: "Severe"},
+                {value: res[1], color: "#E4BB40", highlight: "#FFC870",label: "Elevated"},
+                {value: res[2], color: "#3BC0C3", highlight: "#5AD3D1", label: "High"},
+                {value: res[3], color: "#615CA8", highlight: "#A8B3C5", label: "Guarded"},
+                {value: res[4], color: "#1A2942", highlight: "#616774",label: "Low"}
               ];
               break;
             case("narcotics"):
+              data = FetchData.getNarcotics();
+              res = EmotionCalculator(data);
+              console.log("Narcotics");
+              console.log(data);
+              console.log(res);
               pieData = [
-                {value: 300, color:"#F13C6E", highlight: "#FF5A5E", label: "Severe"},
-                {value: 50, color: "#E4BB40", highlight: "#FFC870",label: "Elevated"},
-                {value: 100, color: "#3BC0C3", highlight: "#5AD3D1", label: "High"},
-                {value: 40, color: "#615CA8", highlight: "#A8B3C5", label: "Guarded"},
-                {value: 120, color: "#1A2942", highlight: "#616774",label: "Low"}
+                {value: res[0], color:"#F13C6E", highlight: "#FF5A5E", label: "Severe"},
+                {value: res[1], color: "#E4BB40", highlight: "#FFC870",label: "Elevated"},
+                {value: res[2], color: "#3BC0C3", highlight: "#5AD3D1", label: "High"},
+                {value: res[3], color: "#615CA8", highlight: "#A8B3C5", label: "Guarded"},
+                {value: res[4], color: "#1A2942", highlight: "#616774",label: "Low"}
               ];           
               break;
             case("trafficking"):
+              data = FetchData.getTrafficking();
+              res = EmotionCalculator(data);
+              console.log("Trafficking");
+              console.log(data);
+              console.log(res);
               pieData = [
-                {value: 300, color:"#F13C6E", highlight: "#FF5A5E", label: "Severe"},
-                {value: 50, color: "#E4BB40", highlight: "#FFC870",label: "Elevated"},
-                {value: 100, color: "#3BC0C3", highlight: "#5AD3D1", label: "High"},
-                {value: 40, color: "#615CA8", highlight: "#A8B3C5", label: "Guarded"},
-                {value: 120, color: "#1A2942", highlight: "#616774",label: "Low"}
+                {value: res[0], color:"#F13C6E", highlight: "#FF5A5E", label: "Severe"},
+                {value: res[1], color: "#E4BB40", highlight: "#FFC870",label: "Elevated"},
+                {value: res[2], color: "#3BC0C3", highlight: "#5AD3D1", label: "High"},
+                {value: res[3], color: "#615CA8", highlight: "#A8B3C5", label: "Guarded"},
+                {value: res[4], color: "#1A2942", highlight: "#616774",label: "Low"}
               ];
               break;
             case("weapons"):
+              data = FetchData.getNarcotics();
+              res = EmotionCalculator(data);
+              console.log("Weapons");
+              console.log(data);
+              console.log(res);
               pieData = [
-                {value: 300, color:"#F13C6E", highlight: "#FF5A5E", label: "Severe"},
-                {value: 50, color: "#E4BB40", highlight: "#FFC870",label: "Elevated"},
-                {value: 100, color: "#3BC0C3", highlight: "#5AD3D1", label: "High"},
-                {value: 40, color: "#615CA8", highlight: "#A8B3C5", label: "Guarded"},
-                {value: 120, color: "#1A2942", highlight: "#616774",label: "Low"}
+                {value: res[0], color:"#F13C6E", highlight: "#FF5A5E", label: "Severe"},
+                {value: res[1], color: "#E4BB40", highlight: "#FFC870",label: "Elevated"},
+                {value: res[2], color: "#3BC0C3", highlight: "#5AD3D1", label: "High"},
+                {value: res[3], color: "#615CA8", highlight: "#A8B3C5", label: "Guarded"},
+                {value: res[4], color: "#1A2942", highlight: "#616774",label: "Low"}
               ];
               break;
     }
