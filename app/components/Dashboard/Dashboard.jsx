@@ -44,7 +44,7 @@ var Dashboard = React.createClass({
                                         </div>
                                         <div id="portlet1" className="panel-collapse collapse in">
                                             <div className="portlet-body">
-                                                <Sparklines  data={[8,20,29, 35]}>
+                                                <Sparklines  data={[8,20,29, 39]}>
                                                     <SparklinesLine color="#FCB274" />
                                                 </Sparklines>
 
@@ -90,25 +90,25 @@ var Dashboard = React.createClass({
                                         </div>
                                         <div id="portlet2" className="panel-collapse collapse in">
                                             <div className="portlet-body">
-                                                <Sparklines data={[-3.8,-3.2,-4.37, -9]}>
+                                                <Sparklines data={[-3.8,-3.2,-4.37, 0]}>
                                                   <SparklinesBars color="#86C98B" style={{fill: "#86C98B"}}/>
                                                 </Sparklines>
                                                 
                                                 <div className="row text-center m-t-30 m-b-30">
                                                     <div className="col-sm-3 col-xs-6">
-                                                        <h4> 3.8</h4>
+                                                        <h4> -4.372</h4>
                                                         <small className="text-muted">Terrorism</small>
                                                     </div>
                                                     <div className="col-sm-3 col-xs-6">
-                                                        <h4> 3.2</h4>
+                                                        <h4> -3.582</h4>
                                                         <small className="text-muted">Narcotics</small>
                                                     </div>
                                                     <div className="col-sm-3 col-xs-6">
-                                                        <h4> 4.37</h4>
+                                                        <h4> -4.428</h4>
                                                         <small className="text-muted">Human Trafficking</small>
                                                     </div>
                                                     <div className="col-sm-3 col-xs-6">
-                                                        <h4> 6.2</h4>
+                                                        <h4>0</h4>
                                                         <small className="text-muted">Weapons</small>
                                                     </div>
                                                 </div>

@@ -16,7 +16,7 @@ var CategoryTableItem = React.createClass({
 						<tr className="gradeX" className="linkable">
 	                      <td>{doc.title}</td>
 	                      <td>{doc.dateFound}</td>
-	                      <td>{scoring}</td>
+	                      <td>-{scoring}</td>
 	                      <td className="actions">{doc.url.slice(0,20)}</td>
 	                    </tr>
                     </Link>

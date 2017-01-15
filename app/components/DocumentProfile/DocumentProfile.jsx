@@ -163,7 +163,7 @@ var DocumentProfile = (props) => {
                                                 </tr>
                                                 <tr>
                                                     <td><b>Overall Ranking</b></td>
-                                                    <td className="ng-binding">{score}</td>
+                                                    <td className="ng-binding">-{score}</td>
                                                 </tr>
                                             </tbody>
                                         </table>
